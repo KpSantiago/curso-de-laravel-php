@@ -15,14 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 // local onde definiremos as rotas para as views
 
-Route::get('/', function () {
-    $nome = "Alan";
+use App\Http\Controllers\EventController;
 
-    $array = ["Kauã", "José", 'Pereira', 'Santiago'];
+Route::get('/', [EventController::class, 'index']);
 
-    return view('welcome', ["nome" => $nome, "namesArray" => $array]);
-});
+Route::get('create', [EventController::class, 'createEvent']);
 
-Route::get("/contacts", function () {
+Route::get('event/create', [EventController::class, 'store']);
+
+Route::get("contacts", function () {
+
     return view('contacts');
 });

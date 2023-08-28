@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="shortcut icon" sizes="60x60" href="./img/experienceEventsLogo.ico" type="image/x-icon">
     <title>@yield('title')</title>
 
     <!-- Fonts -->
@@ -19,17 +19,21 @@
 <body>
     <header>
         <div class="logo">
-            <h2>LOGO</h2>
+            <img src="./img/experienceLogoWhite.svg" alt="Experience Events">
         </div>
         <nav>
             <ul class="menu">
-                <li><a href="/">home</a></li>
-                <li><a href="/contacts">contatos</a></li>
+                <li><a href="/">Eventos</a></li>
+                <li><a href="create">Criar Evento</a></li>
+                <li><a href="/contacts">Cadastrar</a></li>
+                <li><a href="/contacts">Entrar</a></li>
             </ul>
         </nav>
     </header>
     @yield('content')
-    <footer>Site de Kauã Santiago &copy; 2023</footer>
+    <footer>
+        <p>Site de <i>Kauã Santiago</i> &copy; 2023</p>
+    </footer>
     <script src='./js/script.js'></script>
 </body>
 

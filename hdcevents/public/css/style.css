@@ -1,3 +1,250 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial;
+}
+
+:root {
+    --black: #020202;
+    --purple: #ff00d6;
+    --white: #fff;
+    --whiteBody: #efefef;
+}
+
+body {
+    background-color: var(--whiteBody);
+    color: var(--black);
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    background-color: transparent;
+    width: 100%;
+    max-width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.35s;
+}
+
+header.active {
+    background-color: var(--white);
+}
+
+header .logo img {
+    width: 3rem;
+}
+
+header nav .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav .menu li a {
+    text-decoration: none;
+    color: var(--whiteBody);
+    transition: all 0.35s;
+}
+
+header nav .menu li a.active {
+    color: var(--black);
+}
+
+header nav .menu li:hover a {
+    color: var(--purple);
+}
+
+/* HOME PAGE */
+
+#bannerContainer {
+    background: url("../img/bannerSection.png") no-repeat center / cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 90px;
+}
+
+#bannerContainer h1 {
+    color: var(--whiteBody);
+    font-size: 2.2rem;
+}
+
+#bannerContainer form input {
+    background-color: var(--whiteBody);
+    width: 250px;
+    padding: 2.5px 5px;
+    border-radius: 2px;
+    border: 1px solid #0f0f0f22;
+}
+
+#bannerContainer form input:focus {
+    outline: 1px solid var(--purple);
+}
+
+#eventsContainer {
+    width: 100%;
+    height: fit-content;
+    padding: 60px 30px;
+}
+
+#eventsContainer h2 {
+    font-size: 2.1rem;
+    margin-bottom: 5px;
+}
+
+#eventsContainer .subtitle {
+    margin-bottom: 30px;
+}
+
+#eventsContainer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+#eventsContainer .container .event {
+    background-color: var(--white);
+    min-width: 250px;
+    width: 295px;
+    min-height: 300px;
+    height: 375px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+#eventsContainer .container .event .imageBox {
+    background: url("../img/bannerSection.png") no-repeat center center / cover;
+    width: 100%;
+    height: 45%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#eventsContainer .container .event > .item:nth-child(n + 2) {
+    margin: 10px;
+}
+
+#eventsContainer .container .event .date {
+    color: #0009;
+}
+
+#eventsContainer .container .event .title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 20px !important;
+}
+
+#eventsContainer .container .event .viewEventBtn {
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    transition: all 0.35s;
+}
+
+#eventsContainer .container .event .viewEventBtn:hover {
+    background-color: #0f0f0fd9;
+    color: var(--white);
+}
+
+/* CREATE EVENT PAGE */
+
+.formContainer {
+    max-width: 100%;
+    height: calc(100vh - 140px);
+    margin: 60px;
+}
+
+.formContainer form {
+    max-width: 500px;
+}
+
+.formContainer form label {
+    font-size: 16px;
+    font-weight: 600;
+    border-left: 3px solid var(--black);
+    padding: 0 5px;
+}
+
+.formContainer form .form-group {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.formContainer form .form-group input {
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--black);
+}
+
+.formContainer form .form-group input:focus {
+    outline: 2px solid var(--purple);
+}
+
+.formContainer form .form-group select {
+    background-color: transparent;
+    max-width: 45%;
+    padding: 3px;
+}
+
+.formContainer form .form-group textarea {
+    background-color: transparent;
+}
+
+.formContainer form .form-group select:focus,
+.formContainer form .form-group textarea:focus {
+    outline: 2px solid var(--purple);
+}
+
+.formContainer form button {
+    background-color: var(--black);
+    color: var(--whiteBody);
+    font-weight: 600;
+    font-size: 17px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.35s;
+}
+
+.formContainer form button:hover {
+    background-color: #0f0f0fd9;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 100%;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    padding: 0 60px;
+}
+
+footer i {
+    color: var(--purple);
 }
